@@ -15,7 +15,7 @@
 
 A fun reminder for the top of every hour or at the times you choose: an animated character GIF pops up from the bottom corner of your screen, stands on top of the taskbar for a few seconds, says something in a dialogue box, and leaves again. It appears at the top of every hour and at any other times you choose, on top of all your apps.
 
-![Cloud](https://raw.githubusercontent.com/n3thshan/peek-buddy-animated/main/docs/demo-1.gif) ![Sephiroth](https://raw.githubusercontent.com/n3thshan/peek-buddy-animated/main/docs/demo-2.gif) ![Tifa](https://raw.githubusercontent.com/n3thshan/peek-buddy-animated/main/docs/demo-3.gif)
+![Cloud](https://raw.githubusercontent.com/n3thshan/wh-peek-buddy-animated/main/docs/demo-1.gif) ![Sephiroth](https://raw.githubusercontent.com/n3thshan/wh-peek-buddy-animated/main/docs/demo-2.gif) ![Tifa](https://raw.githubusercontent.com/n3thshan/wh-peek-buddy-animated/main/docs/demo-3.gif)
 
 ## Characters
 
