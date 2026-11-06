@@ -11,6 +11,7 @@ character packs (e.g., non-FF7 packs) in the future.
 | `peek-buddy-animated.wh.cpp` | Single-file Windhawk mod. Contains metadata, settings, embedded GIF base64 data, GIF decoding, dialogue box rendering, layout, animation, scheduler, and Windhawk tool-mod boilerplate. |
 | `README.md` | Install and feature guide. |
 | `gifs/` | Source GIF files (embedded as base64 into the .wh.cpp). |
+| `docs/` | The three demo GIFs shown in the readme (`demo-1.gif` Cloud, `demo-2.gif` Sephiroth, `demo-3.gif` Tifa). Resized to 220 px tall so they fit in one row. |
 | `re-embed-gifs.ps1` | PowerShell script that scans `gifs/`, re-encodes every `.gif` as base64, and rewrites the matching arrays in `.wh.cpp`. Existing arrays keep their names; new GIFs get a new array and the script prints the exact `kGifs` line to add. |
 | `AGENTS.md` | This file. |
 | `reference/` | Reference material: original `template.txt` and a copy of the Windhawk wiki. Not part of the build. |
@@ -90,6 +91,9 @@ The two warnings (`MONITORINFO` at `-Wmissing-field-initializers` and `STARTUPIN
 - **Exact times parser**: `ParseTimes` / `ParseOneTime` / `ParseAmPm` must never turn invalid input into a scheduled time (the old bug turned `25:00` into 5:00 AM). Invalid tokens are collected in `g_badTimes`, logged, and shown in the preview bubble — they are never scheduled. If you touch the parser, keep the unit tests in mind: `25:00`, `9:75`, `13 pm` and `0 am` must all end up in `g_badTimes`.
 - **True corner layout**: `StartShow()` computes `CW`/`CH`/`charX`/`charY`/`bubX`/`bubY`/`winX`/`winY` so the character's outer edge sits exactly at the work-area corner edge. Do not re-add an outer margin around the window.
 - The user does not want screenshot verification. If visual confirmation is needed, ask the user.
+- **Readme images**: Windhawk only allows images from `https://i.imgur.com` and `https://raw.githubusercontent.com`. The `.wh.cpp` readme therefore uses full `raw.githubusercontent.com/n3thshan/wh-peek-buddy-animated/main/docs/...` links, while `README.md` uses relative `docs/...` paths (GitHub renders those). If the repo is renamed, update the three links in the `.wh.cpp`.
+- **Keep the readmes in sync**: the `.wh.cpp` readme is the source of truth. `README.md` is the same text plus an `## Install in Windhawk` section and relative image paths.
+- **Resizing demo GIFs**: ffmpeg ships with the File Converter app at `C:\Program Files\File Converter\ffmpeg.exe` (do not install anything). Command used: `ffmpeg -i in.gif -vf "scale=-2:220:flags=lanczos,split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=3" -loop 0 out.gif`.
 - Compile flags: `-DWH_MOD_ID=L"peek-buddy-animated"` must match the `@id` in the mod metadata.
 - All six GIFs in `gifs/` are verified to match their embedded base64. Run `re-embed-gifs.ps1` after replacing any GIF to keep them in sync.
 - `gifs/sephiroth 1.gif` — filename is spelled correctly. Do not rename back to "spehiroth".
