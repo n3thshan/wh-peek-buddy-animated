@@ -1,7 +1,7 @@
 // ==WindhawkMod==
 // @id              peek-buddy-animated
 // @name            Peek Buddy Animated
-// @description     A fun reminder for the top of every hour or at the times you choose: an animated character GIF pops up from the bottom corner of your screen with a dialogue box and a clock (12- or 24-hour)
+// @description     A fun reminder for the top of every hour or at the times you choose: an animated character GIF pops up from the bottom corner of your screen with a dialogue box and the time!
 // @version         1.0
 // @author          n3thshan
 // @github          https://github.com/n3thshan
