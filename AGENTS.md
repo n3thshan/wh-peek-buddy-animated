@@ -95,7 +95,7 @@ The two warnings (`MONITORINFO` at `-Wmissing-field-initializers` and `STARTUPIN
 - **True corner layout**: `StartShow()` computes `CW`/`CH`/`charX`/`charY`/`bubX`/`bubY`/`winX`/`winY` so the character's outer edge sits exactly at the work-area corner edge. Do not re-add an outer margin around the window.
 - The user does not want screenshot verification. If visual confirmation is needed, ask the user.
 - **Readme images**: Windhawk only allows images from `https://i.imgur.com` and `https://raw.githubusercontent.com`. The `.wh.cpp` readme therefore uses full `raw.githubusercontent.com/n3thshan/wh-peek-buddy-animated/main/docs/...` links, while `README.md` uses relative `docs/...` paths (GitHub renders those). If the repo is renamed, update the three links in the `.wh.cpp`.
-- **Keep the readmes in sync**: the `.wh.cpp` readme is the source of truth. `README.md` is the same text plus an `## Install in Windhawk` section and relative image paths.
+- **Keep the readmes in sync**: the `.wh.cpp` readme is the source of truth. `README.md` is the same text plus an `## Install in Windhawk` section and relative image paths, but without the `## Issues` section — the GitHub issues link is only in the mod readme.
 - **Resizing demo GIFs**: ffmpeg ships with the File Converter app at `C:\Program Files\File Converter\ffmpeg.exe` (do not install anything). Command used: `ffmpeg -i in.gif -vf "scale=-2:220:flags=lanczos,split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=3" -loop 0 out.gif`.
 - Compile flags: `-DWH_MOD_ID=L"peek-buddy-animated"` must match the `@id` in the mod metadata.
 - All six GIFs in `gifs/` are verified to match their embedded base64. Run `re-embed-gifs.ps1` after replacing any GIF to keep them in sync.

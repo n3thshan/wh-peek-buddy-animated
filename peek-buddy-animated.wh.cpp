@@ -46,6 +46,10 @@ More packs will be added in future updates.
 This is a non-commercial fan project. Character sprites are from various sources and belong to their respective creators. This mod is not affiliated with or endorsed by any game company.
 
 The original Hourly Peek Buddy mod is by DahaSakinOlamazdim.
+
+## Issues
+
+Found a bug or have an idea? Please open an issue on [GitHub](https://github.com/n3thshan/wh-peek-buddy-animated/issues).
 */
 // ==/WindhawkModReadme==
 
