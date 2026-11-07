@@ -20,14 +20,6 @@ More packs will be added in future updates.
 - Dialogue box with quotes from the characters.
 - The box shows the time and a quote, or just the time, or your own message.
 
-## When does it show up?
-
-- At the top of every hour (can be turned off).
-- Every N minutes, counted from midnight (for example 15 means :00, :15, :30 and :45; 0 turns this off).
-- At exact times of your choice, for example `9:30 AM, 1:15 PM, 5:45 PM`. Both 12-hour and 24-hour input work.
-- Quiet hours: it stays away between the two hours you choose (for example from 23 to 8). Using the same value for both turns quiet hours off.
-- Optional: skip it while a full-screen game, video or presentation is active.
-
 ## Install in Windhawk
 
 1. Open Windhawk.

@@ -14,6 +14,9 @@ character packs (e.g., non-FF7 packs) in the future.
 | `docs/` | The three demo GIFs shown in the readme (`demo-1.gif` Cloud, `demo-2.gif` Sephiroth, `demo-3.gif` Tifa). Resized to 220 px tall so they fit in one row. |
 | `re-embed-gifs.ps1` | PowerShell script that scans `gifs/`, re-encodes every `.gif` as base64, and rewrites the matching arrays in `.wh.cpp`. Existing arrays keep their names; new GIFs get a new array and the script prints the exact `kGifs` line to add. |
 | `AGENTS.md` | This file. |
+| `.gitattributes` | Keeps text files stored and checked out with LF line endings, and marks images as binary. |
+| `LICENSE` | GPL-3.0 license text. |
+| `tools/whstub.cpp` | Stub for Windhawk's runtime API, used by the link check. Not part of the mod. |
 | `reference/` | Reference material: original `template.txt` and a copy of the Windhawk wiki. Not part of the build. |
 
 ## Build commands
@@ -38,7 +41,7 @@ Link check (produces a throwaway DLL):
 "C:\Program Files\Windhawk\Compiler\bin\clang++.exe" "@C:\Program Files\Windhawk\Compiler\compile_flags.txt" "@%TEMP%\whflags-peek-buddy-animated.txt" -shared -O2 -o %TEMP%\peek-buddy-check.dll peek-buddy-animated.wh.cpp tools\whstub.cpp -lole32 -lgdiplus -luser32 -lgdi32 -lshell32
 ```
 
-The two warnings (`MONITORINFO` at `-Wmissing-field-initializers` and `STARTUPINFO` at `-Wmissing-designated-field-initializers`) are harmless and expected. `tools\whstub.cpp` is a local stub for Windhawk's runtime API; it is not shipped with the mod.
+The two warnings (`MONITORINFO` at `-Wmissing-field-initializers` and `STARTUPINFO` at `-Wmissing-designated-field-initializers`) are harmless and expected. `tools\whstub.cpp` is a stub for Windhawk's runtime API, tracked only for the link check; it is not part of the mod.
 
 ## Key design decisions
 
