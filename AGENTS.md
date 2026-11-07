@@ -17,7 +17,7 @@ A Windhawk tool mod: animated FF7 character GIFs pop from the bottom screen corn
 
 - One file, always: `peek-buddy-animated.wh.cpp`. English only.
 - Do not run the build checks (syntax/link) unless the user asks.
-- Push only after asking. Work on `main` only. Commit messages short and casual, like the user's ("update", "fix", "description 2").
+- Never commit and never push. The user git adds, commits and pushes himself. Work on `main` only.
 - Never touch GitHub issues. The user handles them himself.
 - Bump `@version` only when the user asks. Keep numbering simple (1.0 → 1.1).
 - When GIFs change, run `re-embed-gifs.ps1` automatically — no need to ask.
