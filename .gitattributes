@@ -1,0 +1,7 @@
+# Store text as LF and check it out as LF, so Git stops warning about CRLF.
+* text=auto eol=lf
+
+# Images are binary.
+*.gif binary
+*.png binary
+*.jpg binary
